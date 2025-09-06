@@ -86,7 +86,8 @@ Mental Health Support Team
         """
         الكشف عن ما إذا كانت المحادثة تتعلق بحجز موعد
         """
-        appointment_keywords = ["حجز", "موعد", "وقت", "حدد موعد", "أحتاج لموعد"]
+        appointment_keywords = ["booking", "appointment", "time", "schedule an appointment", "I need an appointment"]
+        
         return any(keyword in user_input.lower() for keyword in appointment_keywords)  # التحقق من وجود كلمات حجز الموعد في الإدخال
 
     def ask_for_appointment_details(self, user_input):
@@ -154,3 +155,4 @@ Mental Health Support Team
             return "Your appointment has been successfully booked. A confirmation email has been sent."
 
         return "Sorry, something went wrong. Please try again."
+
